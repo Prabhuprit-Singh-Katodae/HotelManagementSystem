@@ -1,0 +1,40 @@
+/* ===== Staff / admin area ===== */
+.admin-shell { display: grid; grid-template-columns: 238px 1fr; min-height: 100vh; }
+.sidebar { background: var(--wine-dark); color: #d9bfc5; padding: 1.1rem .8rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+.sidebar .brand { padding: .3rem .6rem 1.1rem; }
+.sidebar .group { font-size: .74rem; color: #b98e98; font-weight: 700; padding: 1.1rem .7rem .3rem; letter-spacing: .4px; }
+.sidebar a { display: block; color: #ead6da; padding: .5rem .75rem; border-radius: 3px; font-weight: 500; text-decoration: none; margin-bottom: 1px; border-left: 3px solid transparent; }
+.sidebar a:hover { background: rgba(255,255,255,.08); color: #fff; }
+.sidebar a.active { background: rgba(255,255,255,.14); color: #fff; border-left-color: #e3b9c1; }
+.admin-main { padding: 0 2rem 3rem; min-width: 0; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: .9rem 0; margin-bottom: 1.2rem; border-bottom: 1px solid var(--line); gap: 1rem; color: var(--muted); }
+.topbar .who { display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; font-size: .9rem; color: var(--ink); }
+.menu-btn { display: none; background: var(--wine); color: #fff; border: 0; border-radius: 4px; padding: .4rem .8rem; font-size: 1.1rem; cursor: pointer; }
+
+/* numbers: one ruled strip instead of a row of separate cards */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); background: #fff; border: 1px solid var(--line); border-radius: 5px; border-bottom: 0; border-right: 0; overflow: hidden; }
+.stat { padding: 1rem 1.2rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #fff; }
+.stat .label { color: var(--muted); font-size: .84rem; font-weight: 600; }
+.stat .value { font-family: var(--serif); font-size: 1.9rem; font-weight: 600; line-height: 1.25; color: var(--wine-dark); }
+.stat-wide { grid-column: span 2; }
+.stat.mb { border: 1px solid var(--line); border-radius: 5px; }
+
+.bar-row { display: grid; grid-template-columns: 100px 1fr 40px; align-items: center; gap: .7rem; margin-bottom: .7rem; font-size: .9rem; }
+.bar-track { background: #efe8e9; height: 10px; }
+.bar-fill { background: var(--wine); height: 100%; min-width: 2px; }
+.bar-fill.ok { background: var(--ok); } .bar-fill.info { background: var(--info); } .bar-fill.bad { background: var(--bad); }
+
+.detail-list { display: grid; grid-template-columns: 150px 1fr; gap: .45rem 1rem; margin: 0; }
+.detail-list dt { color: var(--muted); font-weight: 600; font-size: .86rem; }
+.detail-list dd { margin: 0; }
+.rooms-picker label { display: flex; gap: .7rem; align-items: center; border: 1px solid var(--line); padding: .55rem .8rem; border-radius: 4px; margin-bottom: .5rem; cursor: pointer; background: #fff; }
+.rooms-picker label:hover { border-color: var(--wine); background: var(--wine-tint); }
+
+@media (max-width: 960px) {
+  .admin-shell { grid-template-columns: 1fr; }
+  .sidebar { position: fixed; left: -270px; width: 238px; z-index: 80; transition: left .2s; }
+  .sidebar.open { left: 0; }
+  .menu-btn { display: block; }
+  .admin-main { padding: 0 1rem 2rem; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}

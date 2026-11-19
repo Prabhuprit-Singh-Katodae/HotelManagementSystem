@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--
+            The database URL, user and password are NOT written here.
+            HibernateUtil.java reads them from environment variables (DB_URL, DB_USER, DB_PASSWORD)
+            or from src/main/resources/db.properties (a local file that is ignored by Git).
+        -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <!-- No hibernate.dialect here on purpose: HibernateUtil picks MariaDBDialect for MariaDB/XAMPP,
+             otherwise Hibernate auto-detects MySQL. Override with DB_DIALECT if ever needed. -->
+
+        <!-- HikariCP connection pool -->
+        <property name="hibernate.connection.provider_class">org.hibernate.hikaricp.internal.HikariCPConnectionProvider</property>
+        <property name="hibernate.hikari.poolName">HotelMgmtPool</property>
+        <property name="hibernate.hikari.maximumPoolSize">10</property>
+        <property name="hibernate.hikari.minimumIdle">2</property>
+
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+        <!-- hbm2ddl is set in HibernateUtil: "validate" only. The schema is NEVER created or changed. -->
+
+        <mapping class="com.hotelmanagement.entity.Customer"/>
+        <mapping class="com.hotelmanagement.entity.RoomType"/>
+        <mapping class="com.hotelmanagement.entity.Room"/>
+        <mapping class="com.hotelmanagement.entity.Booking"/>
+        <mapping class="com.hotelmanagement.entity.Payment"/>
+        <mapping class="com.hotelmanagement.entity.Employee"/>
+        <mapping class="com.hotelmanagement.entity.HotelService"/>
+        <mapping class="com.hotelmanagement.entity.ServiceBooking"/>
+        <mapping class="com.hotelmanagement.entity.Feedback"/>
+        <mapping class="com.hotelmanagement.entity.UserAccount"/>
+        <mapping class="com.hotelmanagement.entity.BookingStatusHistory"/>
+    </session-factory>
+</hibernate-configuration>

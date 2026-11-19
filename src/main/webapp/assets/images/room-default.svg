@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="room illustration">
+<rect width="640" height="400" fill="#ece6e5"/><rect y="290" width="640" height="110" fill="#b9a49a"/><rect y="284" width="640" height="8" fill="#8e766b"/>
+<rect x="60" y="50" width="170" height="140" rx="3" fill="#f3ecea" stroke="#6e1f2e" stroke-width="6"/><rect x="70" y="60" width="150" height="120" fill="#c9d3dc"/>
+<path d="M70 150 l40 -35 30 22 30 -30 50 43 v30 h-150z" fill="#8497aa" opacity=".5"/><line x1="145" y1="60" x2="145" y2="180" stroke="#f3ecea" stroke-width="5"/>
+<rect x="300" y="215" width="230" height="26" rx="3" fill="#4a3a33"/><rect x="300" y="165" width="230" height="52" rx="5" fill="#5a463d"/>
+<rect x="308" y="205" width="214" height="62" rx="5" fill="#7a5560"/><rect x="308" y="205" width="214" height="18" rx="4" fill="#fff" opacity=".85"/>
+<rect x="318" y="188" width="89" height="22" rx="6" fill="#fff"/><rect x="423" y="188" width="89" height="22" rx="6" fill="#fff"/>
+<rect x="304" y="262" width="10" height="26" fill="#4a3a33"/><rect x="516" y="262" width="10" height="26" fill="#4a3a33"/><rect x="546" y="232" width="34" height="46" rx="3" fill="#6b5448"/><path d="M546 232 l8 -34 h18 l8 34z" fill="#efd9b8"/></svg>

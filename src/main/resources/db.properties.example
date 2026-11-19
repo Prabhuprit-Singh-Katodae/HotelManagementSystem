@@ -1,0 +1,6 @@
+# Copy this file to "db.properties" (same folder) and fill in YOUR values.
+# db.properties is listed in .gitignore, so it is never uploaded to GitHub.
+# On a server, use the environment variables DB_URL, DB_USER and DB_PASSWORD instead.
+db.url=jdbc:mysql://localhost:3306/hotel_management?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+db.user=root
+db.password=YOUR_MYSQL_PASSWORD
