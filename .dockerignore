@@ -1,0 +1,5 @@
+target/
+.git/
+
+src/main/resources/db.properties
+.env

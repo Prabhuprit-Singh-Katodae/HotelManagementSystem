@@ -1,0 +1,22 @@
+# Build output
+target/
+*.class
+
+# Secrets - NEVER commit these
+src/main/resources/db.properties
+.env
+*.env
+
+# IDE files
+nbproject/private/
+nb-configuration.xml
+build/
+dist/
+.idea/
+*.iml
+.vscode/
+
+# OS / logs
+.DS_Store
+Thumbs.db
+*.log
